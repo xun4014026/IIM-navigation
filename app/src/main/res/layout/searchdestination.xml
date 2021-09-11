@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bigGroupView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/dest_groupView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <com.yudiz.beacondemo.MyView
+            android:id="@+id/dest_myView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+
+        <ImageView
+            android:id="@+id/dest_mapmaker"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/map_marker"
+            android:elevation="4dp"
+            />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/search_dest"
+            android:elevation="4dp">
+
+
+            <Button
+                android:id="@+id/dest_destButton"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_button"
+                android:text="選擇目的地"
+                android:textColor="#424242" />
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/dest_destButton"
+                android:src="@drawable/where" />
+
+            <ImageButton
+                android:id="@+id/dest_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/dest_destButton"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/search_blackdp" />
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/dest_floorlist"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="123dp"
+            tools:itemCount="2" />
+
+        <ImageButton
+            android:id="@+id/dest_retarget"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="73dp"
+            android:background="@drawable/bg_round_button"
+            android:contentDescription="Round Button"
+            android:elevation="4dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/gps" />
+
+        <ImageButton
+            android:id="@+id/dest_navigation"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_round_button"
+            android:contentDescription="Round Button"
+            android:elevation="4dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/navigation_s" />
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

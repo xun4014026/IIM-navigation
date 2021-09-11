@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yudiz.beacondemo.DisplayData">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insertBtn_destination"
+        android:text="新增目標點"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insertBtn_beacon"
+        android:text="新增BEACON"
+        android:layout_toRightOf="@+id/insertBtn_destination"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insertBtn_point"
+        android:text="新增定位點"
+        android:layout_toRightOf="@+id/insertBtn_beacon"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insertBtn_connection"
+        android:text="新增連接"
+        android:layout_below="@id/insertBtn_destination"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteAll"
+        android:layout_below="@id/insertBtn_destination"
+        android:layout_toRightOf="@+id/insertBtn_connection"
+        android:text="刪除資料"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LV_destination"
+        tools:listitem="@layout/list_text"
+        android:layout_below="@+id/deleteAll">
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LV_destination"
+        android:id="@+id/text1"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LV_point"
+        android:layout_below="@+id/text1"
+        tools:listitem="@layout/list_text_point">
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LV_point"
+        android:id="@+id/text2"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LV_beacon"
+        android:layout_below="@+id/text2"
+        tools:listitem="@layout/list_text_beacon">
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LV_beacon"
+        android:id="@+id/text3"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LV_connection"
+        android:layout_below="@+id/text3"
+        tools:listitem="@layout/list_text_connection">
+    </ListView>
+
+
+
+</RelativeLayout>
